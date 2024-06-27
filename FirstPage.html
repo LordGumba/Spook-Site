@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        nav {
+    width: 600px;
+    border: 15px solid rgb(104, 205, 104);
+    padding: 50px;
+    margin: 20px;
+    color: solid rgb(252, 160, 232);
+    
+}
+/* Movement options for future updates */
+moveforward {cursor:alias}
+moveleft {}
+moveright {}
+moveup {}
+movedown {}
+
+/* Sets the style and display */
+#navlist {
+  position: relative;
+}
+#navlist li, #navlist a {
+  height: 44px;
+  display: block;
+}
+#home {
+  left: 0px;
+  width: 90px;
+  background: url('HomeIcon.png') 0 0;
+  opacity: 1;}
+  body {
+    background-image: url("VintageBackground.avif");
+    background-repeat: repeat-y;
+    background-size:cover;
+    height: 2000px;
+  }
+  
+ 
+    </style>
+<head>
+  <!-- The Name of the website-->
+<title>The Treasure</title>
+<!-- Is the Navigation to the other pages-->
+<nav>
+    
+    <a href="http://localhost:5500/FirstPage.html">
+        <img src="—Pngtree—cartoon house vector_8467401.png" alt="ToHomePage" style="width:82px;height:82px;">
+    </a> |
+    <a href="SecretPage.html">Surprise</a> |
+    <a href="UpdatesPage.html">NewThings</a> |
+    <a href="HelpPage.html">Bess and George</a>
+    
+  </nav>
+</head>
+<body>
+<!--Sets up the "secret button" and makes it jumpsacre you-->
+<button id="secretButton" type="button">Secret</button>
+<script>
+  document.getElementById('secretButton').addEventListener('click', function() {
+      const originalBackground = document.body.style.backgroundImage;
+      document.body.style.backgroundImage = "url('JumpscareFace.jpg')";
+      
+      
+      setTimeout(() => {
+          document.body.style.backgroundImage = originalBackground;
+      }, 1000);
+  });
+
+</script>
+<!-- Its a heading-->
+<h1>This is a Heading</h1>
+<!-- Its a paragraph thats id'd-->
+<p id="change">This is a paragraph.</p>
+<div onmouseover="mOver(this)" onmouseout="mOut(this)">
+  <!-- Makes the button and adds its effects-->
+<button id="SAFEButton" button type=".button">Click Me! I promise nothing bad will happen!</button>
+</div>
+<script>
+  // activates the music when over it
+  function mOver(obj) {
+    let mySound = new Audio('2019-06-18_-_Creepy_Vibes_-_David_Fesliyan.mp3')
+    if (mySound.paused) {
+      mySound.play()
+    }
+    
+}
+  // stops the music when off the button
+  function mOut(obj) {
+    let mySound = new Audio('2019-06-18_-_Creepy_Vibes_-_David_Fesliyan.mp3')
+    mySound.pause()
+    console.log(mySound);
+}
+  //stops the music when button it clicked and effects curser
+  document.getElementById('SAFEButton').addEventListener('click', function() {
+    document.getElementById("change").style.cursor = "grab";
+    mySound.pause()
+  });
+  
+
+</script>
+
+</body>
+</html>
